@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  try-web:
+    build: "./"
+    working_dir: "/try-web/"
+    command: ["sleep", "infinity"]
+    volumes:
+      - "./../:/try-web/:delegated"
+    ports:
+      - "8080:8080"
